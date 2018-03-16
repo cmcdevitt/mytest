@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_definition">
+    <sys_ws_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_uri>/api/x_8613_my_test_app/request_cmdb_update</base_uri>
+        <consumes>application/json</consumes>
+        <consumes_customized>true</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <is_versioned>false</is_versioned>
+        <name>Request CMDB Update</name>
+        <namespace>x_8613_my_test_app</namespace>
+        <produces>application/json</produces>
+        <produces_customized>true</produces_customized>
+        <service_id>request_cmdb_update</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-03-16 19:29:57</sys_created_on>
+        <sys_id>518a190bdbb01300b6b156f0cf9619ad</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Request CMDB Update</sys_name>
+        <sys_package display_value="My Test Application" source="x_8613_my_test_app">88365983dbb01300b6b156f0cf96196c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="My Test Application">88365983dbb01300b6b156f0cf96196c</sys_scope>
+        <sys_update_name>sys_ws_definition_518a190bdbb01300b6b156f0cf9619ad</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-16 19:33:58</sys_updated_on>
+    </sys_ws_definition>
+</record_update>

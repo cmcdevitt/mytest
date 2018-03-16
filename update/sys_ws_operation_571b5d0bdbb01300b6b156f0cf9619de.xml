@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Add Server</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    	
+	var requestBody = request.body;
+	var requestData = requestBody.data;
+
+	if(requestData instanceof Array){
+		//test for multiple body objects / JSON To-do loop through incoming object?
+		ip = requestData[0].ip;
+		env = requestData[0].env;
+		stpGrp = requestData[0].stpGrp;
+		openView = requestData[0].openView;
+		tripwire = requestData[0].tripwire;
+		arcsight = requestData[0].arcsight;
+		addBackup = requestData[0].addBackup;
+		securityScan = requestData[0].securityScan;
+		
+	}else{
+		//Data is NOT an array
+		ip = requestData.ip;
+		env = requestData.env;
+		stpGrp = requestData.stpGrp;
+		openView = requestData.openView;
+		tripwire = requestData.tripwire;
+		arcsight = requestData.arcsight;
+		addBackup = requestData.addBackup;
+		securityScan = requestData.securityScan;
+		}
+	
+	//Process recieved data
+	//In This case we want to create a requst.
+	
+	/*
+	//This is for non-scoped applications
+	//Creat a Cart
+	var cartId = GlideGuid.generate(null);
+	var cart = new Cart(cartId);
+	//Add user to the cart
+	cart.userID = '62826bf03710200044e0bfc8bcbe5df1'; //abe.turner sys_id for submitter
+	//Select Catalog Item to Add to Cart
+	var item = cart.addItem('9a2fd1cbdbb01300b6b156f0cf96193e');  //sys_id of catalog item "Add Server to CMBD"
+	//Add Question/Answers/Varables to item in cart
+	cart.setVariable(item,'ip', ip); //Set the variable on the from
+	cart.setVariable(item,'env', env); //Set the variable on the from
+	cart.setVariable(item,'stpGrp', stpGrp); //Set the variable on the from
+	cart.setVariable(item,'openView', openView); //Set the variable on the from
+	cart.setVariable(item,'tripwire', tripwire); //Set the variable on the from
+	cart.setVariable(item,'arcsight', arcsight); //Set the variable on the from
+	cart.setVariable(item,'addBackup', addBackup); //Set the variable on the from
+	cart.setVariable(item,'securityScan', securityScan); //Set the variable on the from
+	//Checkout
+	var rc = cart.placeOrder();
+	gs.addInfoMessage(rc.number);
+	*/
+	
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_8613_my_test_app/request_cmdb_update/server</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/server</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-03-16 19:32:27</sys_created_on>
+        <sys_id>571b5d0bdbb01300b6b156f0cf9619de</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Add Server</sys_name>
+        <sys_package display_value="My Test Application" source="x_8613_my_test_app">88365983dbb01300b6b156f0cf96196c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="My Test Application">88365983dbb01300b6b156f0cf96196c</sys_scope>
+        <sys_update_name>sys_ws_operation_571b5d0bdbb01300b6b156f0cf9619de</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-16 20:29:29</sys_updated_on>
+        <web_service_definition display_value="Request CMDB Update">518a190bdbb01300b6b156f0cf9619ad</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
